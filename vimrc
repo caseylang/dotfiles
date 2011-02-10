@@ -72,6 +72,9 @@ set wildmode=list:longest
 " Sets softwrapping
 set wrap linebreak textwidth=0
 
+" Sets command for traversing tabs backwards
+nmap gr :tabprevious<CR>
+
 " Sources the vimrc file on write
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
