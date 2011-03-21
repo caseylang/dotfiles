@@ -81,3 +81,13 @@ if has("autocmd")
   autocmd FileType php DoMatchParen
   autocmd FileType php hi MatchParen ctermbg=blue guibg=lightblue
 endif
+
+fun! <SID>StripTrailingWhitespaces()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  %s///e
+  call cursor(l, c)
+endfun
+
+autocmd BufWritePre *.sql,*.php :call <SID>StripTrailingWhitespaces()
