@@ -18,6 +18,12 @@ set nocompatible
 
 set hidden
 
+" set backspace to be correctly identified
+set backspace=2
+
+" set backspace to work over end of line and tabs
+set backspace=indent,eol,start
+
 "Switchs tabs to spaces
 set expandtab
 set tabstop=2
@@ -64,6 +70,14 @@ set cursorline
 " Makes it so wrapped line movement isn't retarded
 nnoremap j gj
 nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+vnoremap <Down> gj
+vnoremap <Up> gk
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
 
 " Wildmenu?
 set wildmenu
