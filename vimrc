@@ -104,4 +104,4 @@ fun! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfun
 
-autocmd BufWritePre *.sql,*.php :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.sql,*.php,*.css :call <SID>StripTrailingWhitespaces()
