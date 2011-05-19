@@ -10,6 +10,9 @@ filetype on
 let mapleader = ","
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
+" sets ,t to open tags list
+nmap <leader>t :TlistToggle<CR>
+
 " Shows line numbers
 set number
 
@@ -20,6 +23,9 @@ set hidden
 
 " set backspace to be correctly identified
 set backspace=2
+
+" Open tag in new split. Not taglist
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " set backspace to work over end of line and tabs
 set backspace=indent,eol,start
@@ -32,8 +38,12 @@ set shiftwidth=2
 
 set autoindent
 set smartindent
+
 map <S-Enter> O<Esc>
-map <CR> o<Esc>
+
+" Makes enter place a new line without entering insert mode
+"map <CR> o<Esc>
+
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 map <C-L> <C-W>l<C-W><bar>
@@ -104,4 +114,4 @@ fun! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfun
 
-autocmd BufWritePre *.sql,*.php,*.css :call <SID>StripTrailingWhitespaces()
+" autocmd BufWritePre *.sql,*.php,*.css :call <SID>StripTrailingWhitespaces()
