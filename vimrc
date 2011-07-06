@@ -32,9 +32,9 @@ set backspace=indent,eol,start
 
 "Switchs tabs to spaces
 set expandtab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 
 set autoindent
 set smartindent
@@ -114,4 +114,6 @@ fun! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfun
 
+" Added to help twig syntax highlighting
+au BufRead,BufNewFile *.twig set syntax=htmltwig
 " autocmd BufWritePre *.sql,*.php,*.css :call <SID>StripTrailingWhitespaces()
