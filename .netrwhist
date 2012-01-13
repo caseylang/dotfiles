@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/clang/.vim/plugin'
 let g:netrw_dirhist_2='/Users/clang/.vim/.git'
 let g:netrw_dirhist_3='/Volumes/M300/workspace/dev'
 let g:netrw_dirhist_4='/Users/clang/Downloads/upgrade'
 let g:netrw_dirhist_5='/Volumes/M400/workspace/mx00'
+let g:netrw_dirhist_6='/etc/nginx/conf.d'
