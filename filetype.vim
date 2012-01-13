@@ -1,1 +1,1 @@
-au BufRead,BufNewFile /etc/nginx/* set ft=nginx 
+au BufRead,BufNewFile /opt/nginx/* set ft=nginx 
