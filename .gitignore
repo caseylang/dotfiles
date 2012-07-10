@@ -1,3 +1,4 @@
 plugin/taglist.vim
 doc/tags
+.netrwhist
 doc/taglist.txt
