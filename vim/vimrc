@@ -1,0 +1,119 @@
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+syntax on
+colorscheme molokai
+set t_Co=256
+filetype on
+
+" Allows me to enter my vimrc file while in vim
+let mapleader = ","
+nmap <leader>v :tabedit $MYVIMRC<CR>
+
+" sets ,t to open tags list
+nmap <leader>t :TlistToggle<CR>
+
+" Shows line numbers
+set number
+
+"Turns off compatibility for vi
+set nocompatible
+
+set hidden
+
+" set backspace to be correctly identified
+set backspace=2
+
+" Open tag in new split. Not taglist
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
+" set backspace to work over end of line and tabs
+set backspace=indent,eol,start
+
+"Switchs tabs to spaces
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+set autoindent
+set smartindent
+
+map <S-Enter> O<Esc>
+
+" Makes enter place a new line without entering insert mode
+"map <CR> o<Esc>
+
+map <C-J> <C-W>j<C-W>_
+map <C-K> <C-W>k<C-W>_
+map <C-L> <C-W>l<C-W><bar>
+map <C-H> <C-W>h<C-W><bar>
+set fileformats=unix,dos
+
+" Enables the mouse
+set mouse=a
+
+" Makes search case insensitive, but only when I search all lower case
+set ignorecase
+set smartcase
+
+" Highlights search results and clear with ,<space>
+set showmatch
+set hlsearch
+
+nnoremap <leader><space> :noh<cr>
+
+" Indicates which mode you're in 
+set showmode
+
+"No more fucking bell
+set visualbell
+
+"Faster scrolling
+set ttyfast
+
+" Not sure what this does yet.
+set showcmd
+set cursorline
+"set ruler
+
+" Makes it so wrapped line movement isn't retarded
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+vnoremap <Down> gj
+vnoremap <Up> gk
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
+
+" Wildmenu?
+set wildmenu
+set wildmode=list:longest
+
+" Sets softwrapping
+set wrap linebreak textwidth=0
+
+" Sets command for traversing tabs backwards
+nmap gr :tabprevious<CR>
+
+" Sources the vimrc file on write
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+  autocmd FileType php DoMatchParen
+  autocmd FileType php hi MatchParen ctermbg=blue guibg=lightblue
+endif
+
+fun! <SID>StripTrailingWhitespaces()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  %s///e
+  call cursor(l, c)
+endfun
+
+" Added to help twig syntax highlighting
+au BufRead,BufNewFile *.twig set syntax=htmltwig
+autocmd BufWritePre *.sql,*.php,*.css :call <SID>StripTrailingWhitespaces()
