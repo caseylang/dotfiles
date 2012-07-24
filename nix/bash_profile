@@ -23,3 +23,7 @@ complete -W "NSGlobalDomain" defaults
 export CLICOLOR=1
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# Some handy Kace specific commands
+alias codesniffer='phpcs -p --standard=/home/clang/workspace/CodeSniffer/build/Symfony2/ /home/clang/workspace/m500; phpcs -p --standard=/home/clang/workspace/CodeSniffer/build/Symfony2/ /home/clang/workspace/mx00;'
+alias logs="sudo tail -f /home/clang/workspace/m500/Symfony/app/logs/dev.log /var/log/apache2/error.log | grep -i -w '\(critical\|error\|app.ALERT\)'"

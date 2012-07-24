@@ -116,4 +116,6 @@ endfun
 
 " Added to help twig syntax highlighting
 au BufRead,BufNewFile *.twig set syntax=htmltwig
+" SCSS syntax highlighting
+au BufRead,BufNewFile *.scss set filetype=scss
 autocmd BufWritePre *.sql,*.php,*.css :call <SID>StripTrailingWhitespaces()
