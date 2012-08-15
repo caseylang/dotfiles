@@ -26,6 +26,10 @@ Linux:
 
 ln -s ~/dotfiles/nix/bashrc ~/.bashrc
 
+If on Ubunut:
+
+ln -s ~/dotfiles/nix/bash_profile ~/.profile
+
 Switch to the `~/dotfiles` directory, and fetch submodules:
 
 cd ~/dotfiles
@@ -33,3 +37,8 @@ cd ~/dotfiles
 git submodule init
 
 git submodule update
+
+Grab these packages:
+
+sudo apt-get install ctags python-pygments
+
