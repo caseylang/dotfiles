@@ -5,6 +5,10 @@ syntax on
 colorscheme molokai
 set t_Co=256
 filetype on
+filetype plugin on
+
+" Sets the encoding to utf-8
+set encoding=utf-8
 
 " Allows me to enter my vimrc file while in vim
 let mapleader = ","
@@ -12,9 +16,6 @@ nmap <leader>v :tabedit $MYVIMRC<CR>
 
 " sets ,t to open tags list
 nmap <leader>t :TlistToggle<CR>
-
-" Shows line numbers
-set number
 
 "Turns off compatibility for vi
 set nocompatible
@@ -30,7 +31,10 @@ map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 " set backspace to work over end of line and tabs
 set backspace=indent,eol,start
 
-"Switchs tabs to spaces
+"Show the ruler
+set ruler
+
+" Switchs tabs to spaces
 set expandtab
 set tabstop=4
 set softtabstop=4
@@ -51,16 +55,28 @@ map <C-H> <C-W>h<C-W><bar>
 set fileformats=unix,dos
 
 " Enables the mouse
-set mouse=a
+" set mouse=a
+
+" Turns off Vim's default regex chars, makes things more like Perl/Python
+nnoremap / /\v
+vnoremap / /\v
+
+" Makes substitutions run globally by defualt
+set gdefault
 
 " Makes search case insensitive, but only when I search all lower case
 set ignorecase
 set smartcase
 
 " Highlights search results and clear with ,<space>
+set incsearch
 set showmatch
 set hlsearch
 
+" Sets minimun number of screen lines above and below cursor
+set scrolloff=3
+
+" Sets ,+space to clear search results
 nnoremap <leader><space> :noh<cr>
 
 " Indicates which mode you're in 
@@ -75,7 +91,6 @@ set ttyfast
 " Not sure what this does yet.
 set showcmd
 set cursorline
-"set ruler
 
 " Makes it so wrapped line movement isn't retarded
 nnoremap j gj
@@ -113,6 +128,12 @@ fun! <SID>StripTrailingWhitespaces()
   %s///e
   call cursor(l, c)
 endfun
+
+" Additional File Type Support
+autocmd FileType make set noexpandtab
+autocmd BufRead,BufNewFile {Capfile,Guardfile,Vagrantfile,Thorfile,Procfile,config.ru,*.jbuilder,*.pill} setfiletype ruby
+autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setfiletype markdown
+autocmd BufRead,BufNewFile *.json setfiletype javascript
 
 " Added to help twig syntax highlighting
 au BufRead,BufNewFile *.twig set syntax=htmltwig
