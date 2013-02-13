@@ -131,7 +131,7 @@ endfun
 
 " Additional File Type Support
 autocmd FileType make set noexpandtab
-autocmd BufRead,BufNewFile {Capfile,Guardfile,Vagrantfile,Thorfile,Procfile,config.ru,*.jbuilder,*.pill} setfiletype ruby
+autocmd BufRead,BufNewFile {Capfile,Guardfile,Vagrantfile,Thorfile,Procfile,config.ru,*.thor,*.jbuilder,*.pill} setfiletype ruby
 autocmd BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setfiletype markdown
 autocmd BufRead,BufNewFile *.json setfiletype javascript
 
