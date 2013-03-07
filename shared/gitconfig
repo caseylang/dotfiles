@@ -5,13 +5,14 @@
 	s = status -s
 	df = diff --color --color-words --abbrev
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-        unstage = reset HEAD --
+	unstage = reset HEAD --
+    upgrade-submodules = submodule foreach git pull origin master 
 [color]
 	ui = always
 [apply]
 	whitespace = fix
 [core]
-        excludesfile = /Users/clang/.gitignore
+	excludesfile = /Users/clang/.gitignore
 	attributesfile = ~/.gitattributes
 	whitespace = fix,space-before-tab,tab-in-indent,trailing-space
 [color "branch"]
@@ -42,5 +43,13 @@
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
 [user]
-	email = clang1234@gmail.com
+	email = clang1234@gmail.com 
 	name = Casey Lang
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[push]
+	default = simple
