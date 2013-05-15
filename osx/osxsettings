@@ -1,3 +1,9 @@
+# Disable Wake on Lid Open
+# sudo pmset -a lidwake 0
+# Note: I'm sure there is a way to set this as a default
+# but I haven't found it just yet. Saving the command for future
+# me to investigate further. 
+
 # Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
