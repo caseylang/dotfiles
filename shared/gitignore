@@ -14,3 +14,8 @@ Thumbs.db
 .idea
 *.sublime-project
 *.sublime-workspace
+
+# Maybe it's dumb to globablly ignore these but I'm tried of ignoring them in each project I start
+.ruby-gemset
+.ruby-version
+vendor/bundle

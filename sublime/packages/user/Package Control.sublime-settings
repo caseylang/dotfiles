@@ -1,0 +1,26 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"BracketHighlighter",
+		"CoffeeScript",
+		"Color Highlighter",
+		"Elixir",
+		"Emmet",
+		"FileDiffs",
+		"JavaScript Snippets",
+		"Liquid",
+		"Markdown Preview",
+		"Package Control",
+		"Pretty JSON",
+		"Puppet",
+		"RSpec",
+		"Sass",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"Theme - Soda",
+		"Three.js Autocomplete",
+		"Zurb Foundation 4 Snippets"
+	]
+}

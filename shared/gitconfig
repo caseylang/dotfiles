@@ -10,8 +10,9 @@
 [color]
 	ui = always
 [core]
-	excludesfile = /Users/clang/.gitignore
+	excludesfile = /Users/caseylang/.gitignore
 	autocrlf = input
+	exclusesfile = /Users/caseylang/.gitignore
 [color "branch"]
 	current = yellow reverse
 	local = yellow

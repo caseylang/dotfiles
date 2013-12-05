@@ -5,9 +5,6 @@ for file in ~/dotfiles/shared/{bash_prompt,exports,aliases,functions,git_complet
 done
 unset file
 
-# init rvm
-source ~/.rvm/scripts/rvm
-
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
@@ -27,13 +24,20 @@ export CLICOLOR=1
 
 # Set PYTHONPATH to get easy_install to work correctly
 # export PYTHONPATH="/Users/clang/lib/python2.7/site-packages"
-export PATH="/usr/local/share/python:${PATH}"
+#export PATH="/usr/local/share/python:${PATH}"
 
 # Lets OSX Lion see git
-export PATH=$PATH:/usr/local/git/bin
+#export PATH=$PATH:/usr/local/git/bin
 
 # Add Homebrew
-export PATH=$PATH:/usr/local/sbin
+#export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:$PATH
+
+# Add Node Package Manager
+export PATH=$PATH:/usr/local/share/npm/bin
+
+# Shim for rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
