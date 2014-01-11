@@ -8,6 +8,8 @@
 	unstage = reset HEAD --
     upgrade-submodules = submodule foreach git pull origin master 
     lgall = log --all --graph --decorate --oneline --simplify-by-decoration --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    undopush = push -f origin HEAD^:master
+    undocommit = reset --soft 'HEAD^'    
 
 [color]
 	ui = always
@@ -30,6 +32,7 @@
 	untracked = cyan
 [merge]
 	log = true
+	tool = opendiff
 [url "git@github.com:"]
 	insteadOf = "gh:"
 	pushInsteadOf = "github:"
