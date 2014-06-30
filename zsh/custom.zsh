@@ -29,3 +29,6 @@ mdc() {
   mkdir $1
   cd $1
 }
+
+# cat with colorize (requires pygments: sudo easy_install Pygments)
+alias c='colorize'
