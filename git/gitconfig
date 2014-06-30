@@ -14,9 +14,8 @@
 [color]
 	ui = always
 [core]
-	excludesfile = /Users/caseylang/.gitignore
+	excludesfile = /Users/langc/.gitignore
 	autocrlf = input
-	exclusesfile = /Users/caseylang/.gitignore
 [color "branch"]
 	current = yellow reverse
 	local = yellow
