@@ -25,14 +25,13 @@ fancy_echo "Vim"
   ln -s ~/dotfiles/vim/vimrc ~/.vimrc
 
 fancy_echo "Git"
-  ln -s ~/dotfiles/shared/gitattributes ~/.gitattributes
-  ln -s ~/dotfiles/shared/gitconfig ~/.gitconfig
-  ln -s ~/dotfiles/shared/gitignore ~/.gitignore
+  ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
+  ln -s ~/dotfiles/git/gitignore ~/.gitignore
   ln -s ~/dotfiles/shared/inputrc ~/.inputrc
 
 fancy_echo "Bash"
-  ln -s ~/dotfiles/osx/bashrc ~/.bashrc
-  ln -s ~/dotfiles/osx/bash_profile ~/.bash_profile
+  ln -s ~/dotfiles/bash/osx/bashrc ~/.bashrc
+  ln -s ~/dotfiles/bash/osx/bash_profile ~/.bash_profile
 ### end dotfiles
 
 if ! command -v brew &>/dev/null; then

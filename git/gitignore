@@ -19,3 +19,5 @@ Thumbs.db
 .ruby-gemset
 .ruby-version
 vendor/bundle
+
+.vagrant
