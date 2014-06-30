@@ -14,6 +14,7 @@ Thumbs.db
 .idea
 *.sublime-project
 *.sublime-workspace
+*.swp
 
 # Maybe it's dumb to globablly ignore these but I'm tried of ignoring them in each project I start
 .ruby-gemset
