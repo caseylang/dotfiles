@@ -44,7 +44,7 @@ ZSH_CUSTOM="/Users/langc/dotfiles/zsh/"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git colored-man colorize cp jira vagrant bundler)
+plugins=(git colored-man colorize cp vagrant bundler autojump brew brew-cask extract gem git-flow-avh history osx rake-fast rbenv)
 
 source $ZSH/oh-my-zsh.sh
 

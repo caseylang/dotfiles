@@ -21,3 +21,4 @@ Thumbs.db
 vendor/bundle
 
 .vagrant
+.rake_tasks
