@@ -1,6 +1,6 @@
 # mix of sorin and super jarin
-
-PROMPT='%{$fg[grey]%}%~%{$reset_color%}$(git_prompt_info)$(git_remote_status)%{$reset_color%}%{$fg[white]%}#%{$reset_color%} '
+PROMPT='%{$fg[grey]%}%~%{$reset_color%}$(git_prompt_info)$(git_remote_status)%{$reset_color%}
+%{$fg[white]%}#%{$reset_color%} '
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "

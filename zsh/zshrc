@@ -68,3 +68,6 @@ export PATH="/Users/langc/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/s
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Source rbenv
+eval "$(rbenv init -)"

@@ -1,7 +1,5 @@
 [alias]
 	c = commit -am
-	up = pull
-	p = push
 	s = status -s
 	df = diff --color --color-words --abbrev
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
@@ -10,6 +8,10 @@
     lgall = log --all --graph --decorate --oneline --simplify-by-decoration --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
     undopush = push -f origin HEAD^:master
     undocommit = reset --soft 'HEAD^'    
+    padd = add --patch
+    iadd = add --interactive
+	alias = config --get-regexp ^alias\\.
+    sdiff = diff --staged
 
 [color]
 	ui = always
